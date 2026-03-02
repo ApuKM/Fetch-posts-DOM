@@ -1,11 +1,14 @@
-const loadPosts = () => {
+const loadPosts = async () => {
   const url = "https://jsonplaceholder.typicode.com/posts";
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      // console.log(data)
-      displayPosts(data);
-    });
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       // console.log(data)
+  //       displayPosts(data);
+  //     });
+  const res = await fetch(url);
+  const data = await res.json();
+  displayPosts(data);
 };
 
 const displayPosts = (posts) => {
