@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posts</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div>
+    <div class="mt-4 w-[80%] mx-auto">
         <button>Button</button>
-        <button onclick="loadPosts()">Show Posts</button>
-        <ul id="posts-container">
-
-        </ul>
+        <button onclick="loadPosts()" class="bg-green-600 py-2 px-3 rounded-md text-amber-200">Show Posts</button>
+        <div id="posts-container" class="mt-6 grid grid-cols-3 gap-3">
+            
+        </div>
     </div>
     <script src="./posts.js"></script>
 </body>
